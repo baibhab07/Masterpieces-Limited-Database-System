@@ -1,0 +1,13 @@
+SQL> SELECT painting_category,
+  2  COUNT(*) AS "no_of_paintings_available"
+  3  FROM Painting
+  4  WHERE available_status = 'Available'
+  5  GROUP BY painting_category;
+
+PAINTING_CATEGORY    no_of_paintings_available                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+-------------------- -------------------------                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+Landscape                                    6                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+Person                                       6                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+Animal                                       3                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+SQL> spool off
